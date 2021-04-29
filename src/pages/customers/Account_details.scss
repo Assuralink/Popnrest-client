@@ -1,0 +1,50 @@
+#Account_details{
+    float:left;
+    width:600px;
+    margin-left:calc((100% - 600px) / 2);
+    margin-bottom:75px;
+    margin-top:50px;
+}
+
+.Form_account_details{
+    margin-top:25px;
+}
+
+#Alert_infos_not_provided{
+    float:left;
+    width:100%;
+    border-radius:0;
+    margin-bottom:15px;
+}
+
+.Form_account_details .bloc button{
+    margin-left:15px;
+}
+.Form_account_details .bloc button.toogle_action{
+    float:left;
+    width:auto;
+    background:transparent;
+    border:none;
+    font-family:Nunito;
+    font-weight:700;
+    font-size:15px;
+    line-height:45px;
+}
+.Form.Form_account_details .bloc button.toogle_action:hover{
+    color:#ffd400;
+}
+
+.Form_account_details .bloc button.action{
+    float:left;
+    margin-top:0;
+}
+.Form_account_details .bloc button.cancel{
+    float:left;
+    margin-top:0;
+    margin-left:5px;
+}
+
+.Form.Form_account_details ._form{
+    width:250px;
+    height:48px;
+}
