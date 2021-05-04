@@ -6,7 +6,7 @@ const headers = {
     Authorization: "Bearer " + localStorage.getItem("token"),
   },
 };
-const burl = "http://4201251d94b04a58841dc52062c266b0.testmyurl.ws/";
+const burl = "https://popnrest-api.live";
 
 export default {
   get_bookings_list: function (email) {
