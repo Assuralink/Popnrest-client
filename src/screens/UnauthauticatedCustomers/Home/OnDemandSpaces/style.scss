@@ -1,0 +1,49 @@
+#onDemandSpaces {
+  float: left;
+  width: 100%;
+  margin-top: 25px;
+}
+#onDemandSpaces ul {
+  float: left;
+  width: 100%;
+  padding-left: 0;
+  margin-top: 25px;
+}
+#onDemandSpaces ul li {
+  float: left;
+  width: calc((100% / 3) - 40px);
+  display: block;
+}
+#onDemandSpaces ul li:first-child {
+  margin-right: 60px;
+}
+#onDemandSpaces ul li:last-child {
+  margin-left: 60px;
+}
+#onDemandSpaces .illustration {
+  float: left;
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+#getDiscount {
+  background-image: url("../../../../images/Home-GetDiscount.png");
+}
+#listYourSpace {
+  background-image: url("../../../../images/Home-Property.png");
+}
+#companyOffering {
+  background-image: url("../../../../images/Home-Companies.png");
+}
+#onDemandSpaces ul li h6 {
+  float: left;
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 15px;
+}
+#onDemandSpaces ul li a:hover {
+  color: inherit;
+}

@@ -1,0 +1,39 @@
+.carousel {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.podPrice {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #ffd400;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: white;
+  line-height: 45px;
+  padding: 0 25px;
+}
+
+.carouselImage {
+  float: left;
+  width: 100%;
+  height: 480px;
+  background-size: contain;
+  background-position: center;
+}
+#oldstreet1 {
+  background-image: url("../../../../images/oldstreet/slide1.png");
+}
+#oldstreet2 {
+  background-image: url("../../../../images/oldstreet/slide2.png");
+}
+#oldstreet3 {
+  background-image: url("../../../../images/oldstreet/slide3.png");
+}
+#oldstreet4 {
+  background-image: url("../../../../images/oldstreet/slide4.png");
+}
+#oldstreet5 {
+  background-image: url("../../../../images/oldstreet/slide5.JPG");
+}

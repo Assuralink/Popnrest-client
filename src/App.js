@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import Menu from "./components/Menu/Menu";
 import Footer from "./components/Footer/Footer";
-
 import { BrowserRouter } from "react-router-dom";
-
 import RouteService from "./router/index";
-
-import { AuthContext } from "./context/auth";
-
 import "./Global.scss";
 
 export default function App() {
@@ -18,6 +13,7 @@ export default function App() {
     localStorage.getItem("phoneNumber")
   );
   const [email, setEmail] = useState(localStorage.getItem("email"));
+  const [cart, setCart] = useState(localStorage.getItem("cart"));
   const handleLogout = () => {
     setUid(null);
     setFirstname("");
@@ -28,26 +24,10 @@ export default function App() {
   };
 
   return (
-    <AuthContext.Provider
-      value={{
-        uid: uid,
-        setUid: setUid,
-        firstname: firstname,
-        setFirstname: setFirstname,
-        lastname: lastname,
-        setLastname: setLastname,
-        phoneNumber: phoneNumber,
-        setPhoneNumber: setPhoneNumber,
-        email: email,
-        setEmail: setEmail,
-        logout: handleLogout,
-      }}
-    >
-      <BrowserRouter>
-        <Menu />
-        <RouteService />
-        <Footer />
-      </BrowserRouter>
-    </AuthContext.Provider>
+    <BrowserRouter>
+      <Menu />
+      <RouteService />
+      <Footer />
+    </BrowserRouter>
   );
 }

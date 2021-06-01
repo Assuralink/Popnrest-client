@@ -1,7 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-
-import Login from "../pages/login/Login";
+import Login from "../screens/UnauthauticatedCustomers/Login/Login";
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
   const storedUid = localStorage.getItem("uid");

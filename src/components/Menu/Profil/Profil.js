@@ -1,8 +1,8 @@
 import React from "react";
-
-import { AuthContext } from "../../../context/auth";
+import { connect } from "react-redux";
 
 import { Link } from "react-router-dom";
+
 import LogOut from "../LogOut/LogOut";
 
 import "./Profil.scss";
@@ -29,18 +29,15 @@ class Profil extends React.Component {
 
   handleLogout = (ctx) => {
     console.log(">>>> Handle logout");
-    ctx.logout();
     this.setState({
       show_LogoutModal: false,
     });
   };
 
   render() {
-    var user = this.context;
-    console.log("PROFIL CTX");
-    console.log(this.context);
-
-    if (user.uid == null) {
+    console.log("Profil PROPS");
+    console.log(this.props);
+    if (this.props.uid == null) {
       return (
         <div className="Profil">
           <div className="profil_infos">
@@ -55,7 +52,9 @@ class Profil extends React.Component {
         <div className="Profil">
           <div className="profil_infos">
             <span className="profil_username">
-              {user.firstname + " " + user.lastname}
+              {this.props.firstname === "" && this.props.lastname === ""
+                ? "New user"
+                : this.props.firstname + " " + this.props.lastname}
             </span>
             <button
               className="logout_button"
@@ -66,7 +65,6 @@ class Profil extends React.Component {
             <LogOut
               show={this.state.show_LogoutModal}
               onHide={this.handleClose}
-              onLogout={() => this.handleLogout(user)}
             />
           </div>
           <div className="profil_icon connected"></div>
@@ -76,6 +74,15 @@ class Profil extends React.Component {
   }
 }
 
-Profil.contextType = AuthContext;
+const mapStateToProps = (state) => {
+  return {
+    uid: state.loginReducer.uid,
+    firstname: state.loginReducer.firstname,
+    lastname: state.loginReducer.lastname,
+  };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
 
-export default Profil;
+export default connect(mapStateToProps, mapDispatchToProps)(Profil);

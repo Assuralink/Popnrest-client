@@ -1,5 +1,6 @@
 import React from "react";
 import Profil from "./Profil/Profil";
+import Cart from "./Cart/index.js";
 
 import { Link } from "react-router-dom";
 
@@ -12,8 +13,15 @@ class Menu extends React.Component {
       <nav>
         <div class="content">
           <img className="logo_menu" src={logo} alt="logo_popnrest" />
+          <Cart />
           <Profil />
           <ul>
+            <li>
+              <Link to="/oldstreet">OLDSTREET</Link>
+            </li>
+            <li>
+              <Link to="/home">HOME</Link>
+            </li>
             <li>
               <Link to="https://medium.com/@popnrest">BLOG</Link>
             </li>

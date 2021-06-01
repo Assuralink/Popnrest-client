@@ -1,0 +1,31 @@
+#head .illustration {
+  background-image: url("../../../../images/home_overlay.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 675px;
+}
+#head .content {
+  padding: 25px 0;
+}
+#head .illustration article {
+  float: right;
+  width: 320px;
+  margin-top: 19%;
+  text-align: center;
+  margin-right: 50px;
+}
+#head .illustration article h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+#head .illustration article h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+#head .illustration article a.primary {
+  margin-top: 25px;
+}
+#head .illustration article a.secondary {
+  margin-top: 10px;
+}

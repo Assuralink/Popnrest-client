@@ -1,0 +1,35 @@
+#AuthModal article {
+  margin-top: 0;
+}
+
+#AuthModal .separator {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid grey;
+  text-align: center;
+  margin-top: 20px;
+}
+#AuthModal .separator::after {
+  display: inline-block;
+  content: "or";
+  color: black;
+  font-weight: 600;
+  background-color: white;
+  line-height: 20px;
+  bottom: -10px;
+  position: relative;
+  padding: 0 10px;
+  font-size: 1.3em;
+}
+#AuthModal p {
+  float: left;
+  width: 100%;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.switchMode {
+  display: inline;
+  background: transparent;
+  font-weight: 800;
+}
