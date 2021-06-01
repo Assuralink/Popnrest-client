@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-export const url = "http://localhost:8080";
+// export const url = "http://localhost:8080";
 export const securedHeaders = {
   headers: {
     "Content-Type": "application/json",
@@ -10,4 +10,4 @@ export const headers = {
   "Content-Type": "application/json",
 };
 
-// export const url = "https://popnrest-api.live";
+export const url = "https://popnrest-api.live";
